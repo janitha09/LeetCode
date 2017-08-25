@@ -241,6 +241,22 @@ namespace Week46Test
 			int actual = sol.widthOfBinaryTree(&tr);
 			Assert::AreEqual(3, actual);
 		}
+		TEST_METHOD(findFirstElement) {
+			int a[] = { 0,1 };
+			std::vector<int> av(std::begin(a), std::end(a));
+			auto firstElementIt = std::find(av.begin(), av.end(), 1);
+			ptrdiff_t startIndex = std::distance(av.begin(), firstElementIt);
+			Assert::AreEqual(1, (int)startIndex);
+		}
+		TEST_METHOD(findLastElement) {
+			int a[] = { 0,1,0,0,0,1 };
+			int one[] = { 1 };
+			std::vector<int> av(std::begin(a), std::end(a));
+			auto firstElementIt = std::find_end(av.begin(), av.end(), one,one);
+			//auto firstElementIt = std::find(av.rbegin(), av.rend(), 1);
+			ptrdiff_t startIndex = std::distance(av.begin(), firstElementIt);
+			Assert::AreEqual(6, (int)startIndex);
+		}
 		//TEST_METHOD(l1l22r1NodeTree)
 		//{
 		//	Solution sol = Solution();
