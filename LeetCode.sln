@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Week46", "LeetCode\LeetCode.vcxproj", "{138777F8-9DA5-471F-BD1D-D90FEA511214}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Week46Test", "Week46Test\Week46Test.vcxproj", "{C5D80C97-77CB-4B8A-A539-94E2FBB5C40F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Week45", "Week45\Week45.vcxproj", "{1DC941E2-9D78-4291-9808-BBB33F8A5CF8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Week45Test", "Week45Test\Week45Test.vcxproj", "{22F1F42F-F78B-4777-9E44-5D1408200405}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,22 @@ Global
 		{C5D80C97-77CB-4B8A-A539-94E2FBB5C40F}.Release|x64.Build.0 = Release|x64
 		{C5D80C97-77CB-4B8A-A539-94E2FBB5C40F}.Release|x86.ActiveCfg = Release|Win32
 		{C5D80C97-77CB-4B8A-A539-94E2FBB5C40F}.Release|x86.Build.0 = Release|Win32
+		{1DC941E2-9D78-4291-9808-BBB33F8A5CF8}.Debug|x64.ActiveCfg = Debug|x64
+		{1DC941E2-9D78-4291-9808-BBB33F8A5CF8}.Debug|x64.Build.0 = Debug|x64
+		{1DC941E2-9D78-4291-9808-BBB33F8A5CF8}.Debug|x86.ActiveCfg = Debug|Win32
+		{1DC941E2-9D78-4291-9808-BBB33F8A5CF8}.Debug|x86.Build.0 = Debug|Win32
+		{1DC941E2-9D78-4291-9808-BBB33F8A5CF8}.Release|x64.ActiveCfg = Release|x64
+		{1DC941E2-9D78-4291-9808-BBB33F8A5CF8}.Release|x64.Build.0 = Release|x64
+		{1DC941E2-9D78-4291-9808-BBB33F8A5CF8}.Release|x86.ActiveCfg = Release|Win32
+		{1DC941E2-9D78-4291-9808-BBB33F8A5CF8}.Release|x86.Build.0 = Release|Win32
+		{22F1F42F-F78B-4777-9E44-5D1408200405}.Debug|x64.ActiveCfg = Debug|x64
+		{22F1F42F-F78B-4777-9E44-5D1408200405}.Debug|x64.Build.0 = Debug|x64
+		{22F1F42F-F78B-4777-9E44-5D1408200405}.Debug|x86.ActiveCfg = Debug|Win32
+		{22F1F42F-F78B-4777-9E44-5D1408200405}.Debug|x86.Build.0 = Debug|Win32
+		{22F1F42F-F78B-4777-9E44-5D1408200405}.Release|x64.ActiveCfg = Release|x64
+		{22F1F42F-F78B-4777-9E44-5D1408200405}.Release|x64.Build.0 = Release|x64
+		{22F1F42F-F78B-4777-9E44-5D1408200405}.Release|x86.ActiveCfg = Release|Win32
+		{22F1F42F-F78B-4777-9E44-5D1408200405}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
