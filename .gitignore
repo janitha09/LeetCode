@@ -259,3 +259,5 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/Week45/Project1.vcxproj.filters
+/Week45Test/UnitTest1.vcxproj.filters
