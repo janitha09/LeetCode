@@ -32,7 +32,7 @@ int Solution::widthOfBinaryTree(TreeNode* root) {
 
 	int one[] = { 1 };
 	
-	auto firstElementIt = std::find_end(markedLeaves.begin(), markedLeaves.end(), one, one);//probably expensive operations assume N
+	firstElementIt = std::find_end(markedLeaves.begin(), markedLeaves.end(), one, one);//probably expensive operations assume N
 	ptrdiff_t endIndex = std::distance(markedLeaves.begin(), firstElementIt);
 
 	int maxWidth = std::max((int)(endIndex + 1 - startIndex), 0); //probably a bad cast
