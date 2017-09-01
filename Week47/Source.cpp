@@ -22,32 +22,17 @@ int Solution::findKthNumber(int m, int n, int k) {
 int Solution::BinarySearchFindIndex(int values [], int target, int size) {
 	int start = 0;
 	int last = size-1;
-	if (last == 0) {
-		if (target == values[0]) {//found
-			return 0;
-		}else{//not found
-			return 10;//rubbish number
+	while (start <= last) {
+		int mid = (last + start) / 2;
+		if (target == values[mid]) { // 2 !=1
+			return mid;
 		}
-	}
-	//find the middle
-	//you have to loop if it's greater than the start moves if it's less than the end has to move tempted to recurse
-	while (start < last) {
-		int mid = (last - start) / 2; //(1-0/2) = 0.5 -> 0
-		if (target > values[mid]) {
-			if (target == values[mid + 1]) {//reound down
-				return mid + 1;
-			}
-			else {//look in the top half
-				start = mid + 1;
-			}
+		else if (target > values[mid]) { //2 > 1
+			//look in the top half
+			start = mid+1;
 		}
-		else {//less than or equal I think search the bottom half
-			if (target == values[mid]) {
-				return mid;
-			}
-			else {
-				last = mid + 1;
-			}
+		else {//less than or equal search the bottom half
+				last = mid;
 		}
 	}
 }

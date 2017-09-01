@@ -89,9 +89,8 @@ namespace Week47Test
 			int val[] = { 1,2,3 };
 			int target = 1;
 			int actual = sol.BinarySearchFindIndex(val, target, 3);
-			Assert::AreEqual(2, actual);
+			Assert::AreEqual(0, actual);
 		}
-
 	};
 }
 #include <algorithm>
