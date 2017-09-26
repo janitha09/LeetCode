@@ -16,7 +16,7 @@ int Solution::maximumSwap(int num) {
 		int templargest = 0;
 		//std::max_element(digits.begin(), digits.end()));
 		for (int i = digits.size() - 1; i > 0; i--) {
-			for (int j)
+			//for (int j)
 			if (digits.at(i) < digits.at(i - 1)) { //MSD is smaller so swap works for 2 digits only
 				templargest = digits.at(i - 1);// *10 ^ i; //shift it 
 				swappednum += templargest * 10^i;
