@@ -13,28 +13,21 @@ vector<int> Solution::findRedundantConnection(vector<vector<int>>& edges) {
 
 	for (int edgeIndex = 0; edgeIndex <= edges.size() - 1; ++edgeIndex) {
 		edge = edges.at(edgeIndex);
-		if (connectedComponents[edge.at(0)] == 0) { //dpends on an order
-			connectedComponents[edge.at(0)] = edge.at(0); //set it to the first;
-		}
-		if (connectedComponents[edge.at(1)] == 0) {
-			connectedComponents[edge.at(1)] = edge.at(0); //the firest edge - you don't inspect;
-
-		}
-		if (connectedComponents[edge.at(1)] > connectedComponents[edge.at(0)]) {
-			connectedComponents[edge.at(1)] = connectedComponents[edge.at(0)];
+		int smallestNode = edge.at(0) > edge.at(1) ? edge.at(1) : edge.at(0);
+		if (connectedComponents[smallestNode] == 0) {
+			connectedComponents[edge.at(0)] = smallestNode;
+			connectedComponents[edge.at(1)] = smallestNode;
 			edge.clear();
 		}
-		else if (connectedComponents[edge.at(0)] > connectedComponents[edge.at(1)]) {
-			connectedComponents[edge.at(0)] = connectedComponents[edge.at(1)];
-			edge.clear();
+		else if (connectedComponents[edge.at(0)] != 0 && connectedComponents[edge.at(1)] !=0){
+			return edge;
 		}
-		//else if (connectedComponents[edge.at(1)] != 0) {//set the first element in the edge to the second element
-		//	connectedComponents[edge.at(0)] = connectedComponents[edge.at(1)]; //set it to the first;
-		//	edge.clear();
-		//}
 		else {
-			break;
+			connectedComponents[edge.at(0)] = connectedComponents[smallestNode]; //there is one overwrite
+			connectedComponents[edge.at(1)] = connectedComponents[smallestNode];
+			edge.clear();
 		}
+
 	}
 	return edge;
 }
