@@ -125,5 +125,18 @@ namespace Week53Test
 			Assert::AreEqual(1, (int)stickers.size());
 			Assert::AreEqual("aw", stickers.at(0).c_str());
 		}
+		TEST_METHOD(Week53ConstructDFAForKMP) {
+			Solution sol = Solution();
+			string subStr = "ABABAC";
+			int ** actual = sol.KMPDFA(subStr,3,6);
+			Assert::AreEqual(1, actual[0][0]);
+			Assert::AreEqual(0, actual[1][0]);
+			Assert::AreEqual(0, actual[2][0]);
+			Assert::AreEqual(2, actual[1][1]);
+			Assert::AreEqual(3, actual[0][2]);
+			Assert::AreEqual(4, actual[1][3]);
+			Assert::AreEqual(5, actual[0][4]);
+			Assert::AreEqual(6, actual[2][5]);
+		}
 	};
 }

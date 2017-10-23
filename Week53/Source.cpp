@@ -75,3 +75,19 @@ void Solution::removeRedundantStickers(vector<string>& stickers) {
 	}
 	//the is the same as the remove duplicate code.
 }
+void Solution::KMP(string& matchthis, string& tothis) {
+
+}
+int ** Solution::KMPDFA(string &subStr,const int h, const int w) {
+	//int sdf[h][w];
+	int **dfa = new int *[256];
+	for (int i = 0; i < 256; ++i) {
+		dfa[h] = new int[subStr.length()];
+	}
+	dfa[subStr[0]][0] = 1; //starting state
+	//j is the state
+	for (int i = 0,j=1; i < subStr.length(); ++i,++j) {
+		//dfa[subStr[i]][j]=
+	}
+	return dfa;
+}
