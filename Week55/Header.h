@@ -17,26 +17,22 @@
 class RangeNode {
 public:
 	RangeNode() {}
-	RangeNode(int left, int right) : lo(left), hi(right), maxHi(right) {}
+	RangeNode(int left, int right) : lo(left), hi(right), maxHi(right), minLo(lo) {}
 	int lo;
 	int hi;
+	int minLo;
 	int maxHi;
 	RangeNode *smChild;
 	RangeNode *lgChild;
-	RangeNode& operator=(const RangeNode & node) {
-
-	}
 };
 
 class RangeModule {
 public:
 	RangeModule();
-
 	void addRange(int , int );
-
 	bool queryRange(int , int );
-
 	void removeRange(int , int );
+	RangeNode* getRoot();
 private:
 	RangeNode *root = 0;
 	//bool empty; //so you don't have to deal with the = and != operators?
