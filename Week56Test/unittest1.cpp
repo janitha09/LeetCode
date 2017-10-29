@@ -48,8 +48,15 @@ namespace Week56Test
 		{
 			Solution sol = Solution();
 			vector<int> pair = { 1,6,1 };
-			int actual = sol.smallestDistancePair(pair, 2);
+			int actual = sol.smallestDistancePair(pair, 3);
 			Assert::AreEqual(5, actual);
+		}
+		TEST_METHOD(Week563failiedtest621004)
+		{
+			Solution sol = Solution();
+			vector<int> pair = { 62,100,4 };
+			int actual = sol.smallestDistancePair(pair, 2);
+			Assert::AreEqual(96, actual);
 		}
 	};
 }
