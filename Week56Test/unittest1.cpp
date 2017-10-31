@@ -35,14 +35,14 @@ namespace Week56Test
 			Solution sol = Solution();
 			vector<int> pair = { 1,2,3 };
 			int actual = sol.smallestDistancePair(pair, 2);
-			Assert::AreEqual(2, actual);
+			Assert::AreEqual(1, actual);
 		}
 		TEST_METHOD(Week563elementssorted2smallestnegative)
 		{
 			Solution sol = Solution();
 			vector<int> pair = { -1,-2,-3 };
 			int actual = sol.smallestDistancePair(pair, 2);
-			Assert::AreEqual(2, actual);
+			Assert::AreEqual(1, actual);
 		}
 		TEST_METHOD(Week563failiedtest161)
 		{
@@ -56,7 +56,14 @@ namespace Week56Test
 			Solution sol = Solution();
 			vector<int> pair = { 62,100,4 };
 			int actual = sol.smallestDistancePair(pair, 2);
-			Assert::AreEqual(96, actual);
+			Assert::AreEqual(58, actual);
+		}
+		TEST_METHOD(Week563failiedtest1311)
+		{
+			Solution sol = Solution();
+			vector<int> pair = { 1,3,1 };
+			int actual = sol.smallestDistancePair(pair, 1);
+			Assert::AreEqual(0, actual);
 		}
 	};
 }
