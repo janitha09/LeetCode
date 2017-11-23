@@ -23,6 +23,13 @@ namespace Week58Test
 			string actual = sol.countOfAtoms(input);
 			Assert::AreEqual(string("HO"), actual);
 		}
+		TEST_METHOD(Week58OneElementDoNotOrder)
+		{
+			Solution sol = Solution();
+			string input = "Og"; //upercase is smaller than lowercase in ASCII
+			string actual = sol.countOfAtoms(input);
+			Assert::AreEqual(string("Og"), actual);
+		}
 		TEST_METHOD(Week58TwoElementsWrongStoichiometryOrder)
 		{
 			Solution sol = Solution();
@@ -37,5 +44,33 @@ namespace Week58Test
 			string actual = sol.countOfAtoms(input);
 			Assert::AreEqual(string("MgO"), actual);
 		}
+		TEST_METHOD(Week58TwoElementGoodOrder2LetterElements)
+		{
+			Solution sol = Solution();
+			string input = "MgO";
+			string actual = sol.countOfAtoms(input);
+			Assert::AreEqual(string("MgO"), actual);
+		}
+		TEST_METHOD(Week58TwoElementGoodOrder2LetterElementsStoichiometry)
+		{
+			Solution sol = Solution();
+			string input = "MgO2";
+			string actual = sol.countOfAtoms(input);
+			Assert::AreEqual(string("MgO2"), actual);
+		}
+		//TEST_METHOD(Week58TwoElementBadOrder2LetterElementsStoichiometry)
+		//{
+		//	Solution sol = Solution();
+		//	string input = "O2Mg";
+		//	string actual = sol.countOfAtoms(input);
+		//	Assert::AreEqual(string("MgO2"), actual);
+		//}
+		//TEST_METHOD(Week58TwoElementWrongOrder2LetterElements)
+		//{
+		//	Solution sol = Solution();
+		//	string input = "O2Mg";
+		//	string actual = sol.countOfAtoms(input);
+		//	Assert::AreEqual(string("MgO2"), actual);
+		//}
 	};
 }
