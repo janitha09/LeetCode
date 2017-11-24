@@ -28,5 +28,20 @@ namespace Week59Test
 			Assert::AreEqual(1, (int)actual.size());
 			Assert::AreEqual(1, actual.at(0));
 		}
+
+		TEST_METHOD(Week59xto9)
+		{
+			Solution sol = Solution();
+			vector<int> actual = sol.selfDividingNumbers(1, 9);
+			Assert::AreEqual(9, (int)actual.size());
+			Assert::AreEqual(1, actual.at(0));
+			Assert::AreEqual(9, actual.at(8));
+		}
+		TEST_METHOD(Week591020devidebyzero)
+		{
+			Solution sol = Solution();
+			vector<int> actual = sol.selfDividingNumbers(10, 10);
+			Assert::AreEqual(0, (int)actual.size());
+		}
 	};
 }

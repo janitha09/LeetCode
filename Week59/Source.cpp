@@ -8,5 +8,10 @@ vector<int> Solution::selfDividingNumbers(int left, int right) {
 	if (left == right) {
 		result.push_back(left);
 	}
+	if (right < 10) {
+		for (int i = left; i <= right; ++i) {
+			result.push_back(i);
+		}
+	}
 	return result;
 }
