@@ -32,7 +32,15 @@ namespace Week61Test
 			vector<int> temps = { 60,50 };
 			vector<int> actuals = sol.dailyTemperatures(temps);
 			Assert::AreEqual(0, actuals.at(0));
-			Assert::AreEqual(0, actuals.at(0));
+			Assert::AreEqual(0, actuals.at(1));
+		}
+		TEST_METHOD(Week61TwoDaysIncreasingTemp)
+		{
+			Solution sol = Solution();
+			vector<int> temps = { 50,60 };
+			vector<int> actuals = sol.dailyTemperatures(temps);
+			Assert::AreEqual(10, actuals.at(0));
+			Assert::AreEqual(0, actuals.at(1));
 		}
 
 		TEST_METHOD(Week61ThreeDaysIncreasingTemps1)
